@@ -21,11 +21,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1e05eJqboSDRoMm4PtaelMKh0Jm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -91,12 +93,24 @@
       <option name="presentableId" value="Default" />
       <updated>1593445763833</updated>
       <workItem from="1593445765541" duration="5184000" />
-      <workItem from="1593547937785" duration="295000" />
+      <workItem from="1593547937785" duration="546000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1593548477682</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593548477682</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="WindowStateProjectService">
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593548182885">
@@ -119,6 +133,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="599" y="107" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-399.-1440.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1593548229269" />
+    <state x="434" y="127" key="CommitChangelistDialog2" timestamp="1593548477404">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="434" y="127" key="CommitChangelistDialog2/-399.-1440.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1593548477404" />
     <state width="1638" height="293" key="GridCell.Tab.0.bottom" timestamp="1593548215821">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -155,10 +173,14 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="349" y="164" key="SettingsEditor/-399.-1440.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1593548022989" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1593548389143">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1593548481639">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/-399.-1440.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1593548389143" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/-399.-1440.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1593548481639" />
+    <state x="629" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593548615250">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="629" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-399.-1440.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1593548615250" />
     <state x="505" y="233" key="search.everywhere.popup" timestamp="1593449443099">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
