@@ -1,8 +1,9 @@
 package com.trackyourself.security;
 
-//import com.trackyourself.service.MongoUserDetailsService;
+import com.trackyourself.service.MongoUserDetailsService;
 import java.util.Arrays;
 
+import com.trackyourself.service.MongoUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,17 +20,17 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-//  final private MongoUserDetailsService detailsService;
-//  
-//  public SecurityConfig(MongoUserDetailsService detailsService) {
-//    this.detailsService = detailsService;
-//  }
+  final private MongoUserDetailsService detailsService;
+
+  public SecurityConfig(MongoUserDetailsService detailsService) {
+    this.detailsService = detailsService;
+  }
   
   @Override
-  protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-//    auth.userDetailsService(detailsService);
-    auth.inMemoryAuthentication()
-      .withUser("admin").password(passwordEncoder().encode("password")).roles("USER");
+  protected void configure(final AuthenticationManagerBuilder auth) throws Exception { 
+    auth.userDetailsService(detailsService);
+//    auth.inMemoryAuthentication()
+//      .withUser("admin").password(passwordEncoder().encode("password")).roles("USER");
   }
   
   @Override
@@ -38,7 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
       .csrf().disable()
       .cors().and()
       .authorizeRequests()
-      .antMatchers("/is_logged_in").permitAll()
+      .antMatchers("/user/**").permitAll()
       .anyRequest().authenticated()
       .and()
       .formLogin()
