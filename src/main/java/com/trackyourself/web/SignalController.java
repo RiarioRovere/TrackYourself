@@ -25,8 +25,9 @@ public class SignalController {
     return signalDAO.findSignalByUsername(principal.getName());
   }
   
-  @PostMapping("/signal")
-  public void saveSignal(@RequestBody Signal signal, Principal principal) {
-    signalDAO.save(signal, principal.getName());
+  @PostMapping("/signals")
+  public void saveSignal(@RequestBody List<Signal> signals, Principal principal) {
+    signalDAO.save(signals, principal.getName());
   }
 }
+

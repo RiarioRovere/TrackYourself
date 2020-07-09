@@ -1,10 +1,8 @@
 package com.trackyourself.security;
 
-import com.trackyourself.service.MongoUserDetailsService;
 import java.util.Arrays;
 
 import com.trackyourself.service.MongoUserDetailsService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -42,7 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
       .antMatchers("/user/**").permitAll()
       .anyRequest().authenticated()
       .and()
-      .formLogin()
+      .httpBasic()
       .and()
       .rememberMe();
   }
