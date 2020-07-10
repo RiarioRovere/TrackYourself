@@ -50,20 +50,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     return new BCryptPasswordEncoder();
   }
   
-  @Bean
-  CorsConfigurationSource corsConfigurationSource() {
-    CorsConfiguration configuration = new CorsConfiguration();
-    configuration.setAllowCredentials(true);
-    configuration.setAllowedOrigins(Arrays.asList(
-      "http://localhost:3000", 
-      "http://d1dm4qh0b5fw2m.cloudfront.net", 
-      "https://d1dm4qh0b5fw2m.cloudfront.net",
-      "http://trackyourself.io",
-      "https://trackyourself.io"
-    ));
-    configuration.setAllowedMethods(Arrays.asList("GET","POST"));
-    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-    source.registerCorsConfiguration("/**", configuration);
-    return source;
-  }
+//  @Bean
+//  CorsConfigurationSource corsConfigurationSource() {
+//    CorsConfiguration configuration = new CorsConfiguration();
+//    configuration.setAllowCredentials(true);
+//    configuration.setAllowedOrigins(Arrays.asList(
+//      "http://localhost:3000", 
+//      "http://d1dm4qh0b5fw2m.cloudfront.net", 
+//      "https://d1dm4qh0b5fw2m.cloudfront.net",
+//      "http://trackyourself.io",
+//      "https://trackyourself.io"
+//    ));
+//    configuration.setAllowedMethods(Arrays.asList("GET","POST", "OPTIONS"));
+//    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+//    source.registerCorsConfiguration("/**", configuration);
+//    return source;
+//  }
 }
