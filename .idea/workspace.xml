@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f65c951-cfab-4f39-9a9c-7059d0dd5ce5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/trackyourself/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/trackyourself/security/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +113,7 @@
       <workItem from="1594307960497" duration="3232000" />
       <workItem from="1594341655295" duration="193000" />
       <workItem from="1594383151447" duration="191000" />
-      <workItem from="1594394083662" duration="11666000" />
+      <workItem from="1594394083662" duration="11768000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1593548477682</created>
@@ -186,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594525348163</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="better">
+      <created>1594525413267</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1594525413267</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +221,8 @@
     <MESSAGE value="fix cors issue" />
     <MESSAGE value="add signal's date" />
     <MESSAGE value="support JWT authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="support JWT authentication" />
+    <MESSAGE value="better" />
+    <option name="LAST_COMMIT_MESSAGE" value="better" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="287" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1593920415971">
@@ -243,11 +250,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="599" y="0" width="895" height="1050" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-399.-1440.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1593551563892" />
-    <state x="434" y="127" key="CommitChangelistDialog2" timestamp="1594525347974">
+    <state x="434" y="127" key="CommitChangelistDialog2" timestamp="1594525413127">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="434" y="127" key="CommitChangelistDialog2/-399.-1440.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1594316654624" />
-    <state x="434" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1594525347974" />
+    <state x="434" y="127" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1594525413127" />
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1594397569788">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -362,11 +369,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="349" y="164" key="SettingsEditor/-399.-1440.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1593549791103" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1594525350340">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1594525414870">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/-399.-1440.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1594316656751" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594525350340" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1594525414870" />
     <state x="629" y="449" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593548783183">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
