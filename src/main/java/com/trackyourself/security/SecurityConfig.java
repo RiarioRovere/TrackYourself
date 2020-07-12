@@ -21,17 +21,16 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
   final private MongoUserDetailsService detailsService;
 
-  public SecurityConfig(MongoUserDetailsService detailsService) {
+  public SecurityConfig(MongoUserDetailsService detailsService, JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint, MongoUserDetailsService userDetailsService, JwtRequestFilter jwtRequestFilter) {
     this.detailsService = detailsService;
+    this.jwtAuthenticationEntryPoint = jwtAuthenticationEntryPoint;
+    this.userDetailsService = userDetailsService;
+    this.jwtRequestFilter = jwtRequestFilter;
   }
   
-  @Autowired
-  private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
-  @Autowired
-  private MongoUserDetailsService userDetailsService;
-  
-  @Autowired
-  private JwtRequestFilter jwtRequestFilter;
+  private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
+  private final MongoUserDetailsService userDetailsService;
+  private final JwtRequestFilter jwtRequestFilter;
   
   @Bean
   @Override
