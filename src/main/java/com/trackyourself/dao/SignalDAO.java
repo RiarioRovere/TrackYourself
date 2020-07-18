@@ -19,7 +19,9 @@ public class SignalDAO {
   
   public void save(final List<Signal> signal, String username) {
     signal.stream().forEach(s -> {
-      repository.save(s.withUsername(username));
+      repository.save(
+        s.withUsername(username)
+      );
     });
   }
   

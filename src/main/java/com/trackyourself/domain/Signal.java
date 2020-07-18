@@ -19,4 +19,5 @@ public class Signal {
   private String username;
   private String name;
   private double value;
+  private String date;
 }
