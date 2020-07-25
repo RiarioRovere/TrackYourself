@@ -10,4 +10,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SignalRepository extends MongoRepository<Signal, ObjectId> {
   List<Signal> findSignalsByUsername(String username);
+  
+  void deleteByUsernameAndNameAndDate(String username, String name, String date);
 }

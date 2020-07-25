@@ -28,4 +28,8 @@ public class SignalDAO {
   public List<Signal> findSignalByUsername(String username) {
     return repository.findSignalsByUsername(username);
   }
+  
+  public void delete(String username, String signalName, String date) {
+    repository.deleteByUsernameAndNameAndDate(username, signalName, date);
+  }
 }
