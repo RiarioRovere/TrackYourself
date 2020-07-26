@@ -17,6 +17,7 @@ public class SummaryDAO {
   }
   
   public void save(String username, String summary, String date) {
+    delete(username, date);
     repository.save(new DailySummary().withUsername(username).withSummary(summary).withDate(date));
   }
   
