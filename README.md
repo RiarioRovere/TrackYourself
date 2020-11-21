@@ -1,6 +1,8 @@
 # TrackYourself
 SelfTracking application for life quality analysis 
 
+mvn package ??--clean
+
 docker build . -t track-yourself-front:latest-back
 
 docker run -p 8080:8080 track-yourself-front:latest-back
