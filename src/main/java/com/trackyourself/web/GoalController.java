@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -23,8 +24,12 @@ public class GoalController {
   }
   
   @GetMapping("/goals")
-  public List<Goal> getGoals(Principal principal) {
-    return goalDAO.findGoalByUsername(principal.getName());
+  public List<Goal> getGoals(@RequestParam(required = false) String user, Principal principal) {
+    if (user == null) {
+      return goalDAO.findGoalByUsername(principal.getName());
+    } else {
+      return goalDAO.findGoalByUsername(user);
+    }
   }
   
   @PostMapping("/goal")

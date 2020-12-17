@@ -33,12 +33,12 @@ public class GoalReportController {
   }
   
   @GetMapping("/goal/report/{reportId}")
-  public GoalReport getGoal(@PathVariable String reportId) {
+  public GoalReport getReport(@PathVariable String reportId) {
     return reportDAO.findById(reportId);
   }
   
   @DeleteMapping("/goal/report/{reportId}")
-  public void deleteGoal(@PathVariable String reportId, Principal principal) {
+  public void deleteReport(@PathVariable String reportId, Principal principal) {
     reportDAO.deleteByIdAndUsername(reportId, principal.getName());
   }
 }
