@@ -4,13 +4,11 @@ import java.util.Date;
 
 import javax.persistence.Id;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.With;
+import lombok.*;
 
 @Data
 @With
+@Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
 public class Goal {
@@ -20,5 +18,24 @@ public class Goal {
   private String username;
   private String title;
   private String description;
+  private Boolean isPublic;
   private Date date;
+
+  public Goal mergeFrom(Goal o) {
+    if (this == o) return this;
+    GoalBuilder b = this.toBuilder();
+    if (o.title != null) {
+      b.title = o.title;
+    }
+    if (o.description != null) {
+      b.description = o.description;
+    }
+    if (o.isPublic != null) {
+      b.isPublic = o.isPublic;
+    }
+    if (o.date != null) {
+      b.date = o.date;
+    }
+    return b.build();
+  }
 }

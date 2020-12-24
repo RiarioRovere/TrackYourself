@@ -26,9 +26,9 @@ public class GoalController {
   @GetMapping("/goals")
   public List<Goal> getGoals(@RequestParam(required = false) String user, Principal principal) {
     if (user == null) {
-      return goalDAO.findGoalByUsername(principal.getName());
+      return goalDAO.findGoalByUsername(principal.getName(), principal.getName());
     } else {
-      return goalDAO.findGoalByUsername(user);
+      return goalDAO.findGoalByUsername(user, principal.getName());
     }
   }
   
@@ -41,9 +41,14 @@ public class GoalController {
   public Goal getGoal(@PathVariable String id) {
     return goalDAO.findById(id);
   }
+
+  @PostMapping("goal/{id}/update")
+  public Goal updateGoal(@RequestBody Goal goal, @PathVariable String id, Principal principal) {
+    return goalDAO.updateGoal(id, goal, principal.getName());
+  }
   
   @DeleteMapping("/goal/{id}")
-  public void deleteGoal(@PathVariable String id) {
-    goalDAO.deleteById(id);
+  public void deleteGoal(@PathVariable String id, Principal principal) {
+    goalDAO.deleteByIdAndUsername(id, principal.getName());
   }
 }

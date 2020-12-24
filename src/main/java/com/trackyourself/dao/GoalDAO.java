@@ -1,5 +1,6 @@
 package com.trackyourself.dao;
 
+import java.security.Principal;
 import java.time.Instant;
 import java.util.Date;
 import java.util.List;
@@ -22,15 +23,31 @@ public class GoalDAO {
     repository.save(goal.withUsername(username).withDate(Date.from(Instant.now())));
   }
   
-  public List<Goal> findGoalByUsername(String username) {
-    return repository.findByUsername(username);
+  public List<Goal> findGoalByUsername(String username, String requester) {
+    if (requester.equals(username)) {
+      return repository.findByUsername(username);
+    }
+    return findPublicGoalsByUsername(username);
+  }
+
+  public List<Goal> findPublicGoalsByUsername(String username) {
+    return repository.findByUsernameAndIsPublic(username, true);
   }
   
   public Goal findById(String id) {
     return repository.findById(id).orElse(null);
   }
+
+  public Goal updateGoal(String id, Goal goal, String username) {
+    Goal old = repository.findByIdAndUsername(id, username).orElse(null);
+    if (old != null) {
+      old = old.mergeFrom(goal);
+      repository.save(old);
+    }
+    return old;
+  }
   
-  public void deleteById(String id) {
-    repository.deleteById(id);
+  public void deleteByIdAndUsername(String id, String username) {
+    repository.deleteByIdAndUsername(id, username);
   }
 }
